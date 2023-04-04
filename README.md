@@ -17,7 +17,7 @@ Compiling
 This program should consist of a single header file, annealing.h, and a single
 ANSI C program, annealing.c. It should compile by running
 
-    cc annealing.c -o anneal -lm
+    cc annealing.c -std=c99 -o anneal -lm
 
 in a terminal, where "cc" is your choice of either GCC or Clang. (On Linux with
 GCC, I needed to pass -lm. This might vary for you.)
