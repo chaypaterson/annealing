@@ -38,7 +38,7 @@ int main(int argc, char* argv[]) {
         printf("where [precision] is your chosen precision for the answer.\n");
         return 1;
     } else { 
-        double x_guess = 1.0; // replace me
+        double x_guess = 1.0; // your choice
         double precisn = 0.01; // replace me
         printf("Minimising objective function...\n");
         double x_min = annealing_min(energy, x_guess, precisn);
