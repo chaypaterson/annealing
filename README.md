@@ -53,19 +53,9 @@ they are smaller. To avoid becoming trapped in local minima, there is some
 random probability that we accept a higher value of x. This probability gets
 stricter and stricter as the temperature T decreases.
 
-There are several parts of the pseudocode algorithm on Wikipedia that are left unspecified. I will make the following suggestions. (I might be wrong.)
+One possible optimisation is what "neighbours" of x should be tried each step.
+Currently, we consider a region that is between 0 and twice the size of the
+initial guess. This is clearly not ideal, because if the initial guess is too
+small the true minimum will be missed.
 
-    1. What "neighbours" of x should we try each step?
-        I suggest choosing the next neighbour of x from a uniform distribution
-        between [x-w, x+w]. w could be 
-            w = x * (precision + sqrt(T)) / (x + sqrt(T));
-        This way, the "hops" to nearest neighbours start out large and gradually
-        approach "precision".
-    2. For the acceptance probability, I would choose
-
-    double prob_accept(double x_new, double x_best, double T) {
-        if (x_new < x_best) return 1.0;
-        else return exp((x_best - x_new) / T);
-    }
-
-    or something equivalent if you can think of a shorter way of doing it.
+This aspect is a work in progress.
