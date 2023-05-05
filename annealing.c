@@ -106,7 +106,7 @@ int main(int argc, char* argv[]) {
     double precision = atof(argv[1]);
     printf("Minimising objective function... \n ");
     double x_min = annealing_min(energy, x_guess, precision);
-    printf("%g %g\n", x_min, precision);
+    printf("%.17g %.17g\n", x_min, precision);
     printf("Done\n");
 
     return 0;
