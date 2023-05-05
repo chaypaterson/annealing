@@ -73,8 +73,8 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    double x_guess = 100.0; // your choice
-    double precision = atof(argv[1]); // replace me
+    double x_guess = 100.0;
+    double precision = atof(argv[1]);
     printf("Minimising objective function... \n ");
     double x_min = annealing_min(energy, x_guess, precision);
     printf("%g %g\n", x_min, precision);
