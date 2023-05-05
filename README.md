@@ -54,8 +54,5 @@ random probability that we accept a higher value of x. This probability gets
 stricter and stricter as the temperature T decreases.
 
 One possible optimisation is what "neighbours" of x should be tried each step.
-Currently, we consider a region that is between 0 and twice the size of the
-initial guess. This is clearly not ideal, because if the initial guess is too
-small the true minimum will be missed.
-
-This aspect is a work in progress.
+This aspect is a work in progress. We are experimenting with different
+distributions of neighbours.
